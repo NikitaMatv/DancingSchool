@@ -1,0 +1,36 @@
+﻿<Page x:Class="DancingSchool.Pages.TrainerListPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DancingSchool.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TrainerListPages">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button x:Name="BtListStudent"  Click="BtListStudent_Click">Список учеников</Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" Width="800" x:Name="TrainerList" AutoGenerateColumns="False"   d:ItemsSource="{d:SampleData ItemCount=5}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding PhoneNumber}"/>
+                <DataGridTextColumn Header="Почта" Binding="{Binding Email}"/>
+                <DataGridTemplateColumn Header="delete">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Command="Delete" Click="Button_Click" Content="X"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                 </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
