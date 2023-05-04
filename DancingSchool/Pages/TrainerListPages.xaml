@@ -16,7 +16,7 @@
         <StackPanel Orientation="Horizontal" Grid.Row="0">
             <Button x:Name="BtListStudent"  Click="BtListStudent_Click">Список учеников</Button>
         </StackPanel>
-        <DataGrid Grid.Row="1" Width="800" x:Name="TrainerList" AutoGenerateColumns="False"   d:ItemsSource="{d:SampleData ItemCount=5}">
+        <DataGrid Grid.Row="1" Width="800" x:Name="TrainerList" AutoGenerateColumns="False" d:ItemsSource="{d:SampleData ItemCount=5}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"/>
