@@ -37,7 +37,7 @@
                         <TextBlock FontSize="15" Text="{Binding Email,StringFormat='Почта: {0}'}"></TextBlock>
                         <TextBlock FontSize="15"  Text="{Binding GroupId,StringFormat='Номер группы: {0}'}"></TextBlock>
                         <Button x:Name="BtEdintStudent" Click="EdintStudent_Click">Редактировать</Button>
-                        <Button x:Name="BtDellStudent" Click="DellStudent_Click">Удалить</Button>
+
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -78,12 +78,6 @@ namespace DancingSchool.Pages
             NavigationService.Navigate(new EditStudentPages(student));
         }
 
-        private void DellStudent_Click(object sender, RoutedEventArgs e)
-        {
-            var student = (sender as Button).DataContext as Student;
-            student.IsDell = 1;
-            App.Db.SaveChanges();
-            Update();
-        }
+      
     }
 }
